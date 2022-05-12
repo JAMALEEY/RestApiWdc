@@ -4,7 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-// tells Spring Boot to help out, wherever possible.
+// SpringBootApplication= component scanning, autoconfiguration, and property support
+//fire up a servlet container and serve up our service.
 public class RestApiWdcApplication {
 
     public static void main(String[] args) {
