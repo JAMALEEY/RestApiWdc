@@ -2,14 +2,14 @@ version: '3.8'
 services:
   db:
     image: postgres:14.1-alpine
+    container_name: RestApiWdcContainer
     restart: always
+    ports:
+      - "5432:5432"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-    ports:
-      - '5432:5432'
+      - POSTGRES_DB=RestApiWdc
+
     volumes:
-      - db:/var/lib/postgresql/data
-volumes:
-  db:
-    driver: local
+      - ./storage:/var/lib/postgresql/data

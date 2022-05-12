@@ -7,12 +7,14 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
 @ToString
 
+//@Entity is a JPA annotation to make this object ready for storage in a JPA-based data store.
 @Entity
 @Table(name = "users")
 // on order to enable the deserialization of the fields in the process of persistence crossplatform
@@ -56,6 +58,7 @@ public class User implements Serializable {
 
     @NotNull(message = "role")
     @Column(name = "role", nullable = false)
-    private Role role;
+    @OneToMany
+    private List<Role> roles;
 
 }

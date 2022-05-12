@@ -24,9 +24,4 @@ public class Role implements Serializable {
     @Column(name = "role name")
     private String roleName;
 
-    @NotNull(message = "please choose role name")
-    @ElementCollection
-    @Column(name = "role name")
-//    @CollectionTable(name="listOfUsers")
-    private  ArrayList <String> access = new ArrayList<String>();
 }
