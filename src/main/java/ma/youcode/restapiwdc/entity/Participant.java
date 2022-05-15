@@ -18,8 +18,8 @@ public class Participant extends User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idParticipant;
 
-    @Column(name = "domaine")
-    private String domaine;
+    @Column(name = "participantDomain")
+    private String participantDomain;
 
     @Column(name = "structure")
     private String structure;

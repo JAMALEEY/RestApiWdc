@@ -3,6 +3,7 @@ package ma.youcode.restapiwdc.entity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -10,15 +11,14 @@ import java.io.Serializable;
 @Setter
 @ToString
 @Entity
-@Table(name = "activitytypes")
-public class ActivityType implements Serializable {
-
+@PrimaryKeyJoinColumn(name = "idResponsible")
+@Table(name = "responsibles")
+public class Responsible extends User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTypeActivity")
-    private Long id;
+    private Long idResponsible;
 
-    @Column(name = "activityType")
-    private String activityType;
+    @Column(name = "resposibleDomain")
+    private String resposibleDomain;
 
 }

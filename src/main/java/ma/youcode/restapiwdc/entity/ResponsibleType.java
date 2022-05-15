@@ -10,15 +10,15 @@ import java.io.Serializable;
 @Setter
 @ToString
 @Entity
-@Table(name = "activitytypes")
-public class ActivityType implements Serializable {
+@Table(name = "responsibletypes")
+public class ResponsibleType implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTypeActivity")
+    @Column(name = "idTypeResponsible")
     private Long id;
 
-    @Column(name = "activityType")
-    private String activityType;
+    @Column(name = "responsibleType")
+    private String responsibleType;
 
 }
