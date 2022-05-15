@@ -1,52 +1,45 @@
 package ma.youcode.restapiwdc.service;
 
 import ma.youcode.restapiwdc.dto.model.user.UserDto;
+import ma.youcode.restapiwdc.entity.User;
+import ma.youcode.restapiwdc.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserServiceImpl implements UserService {
+
+    private UserRepository userRepository;
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
+
     @Override
-    public UserDto adminAuth(UserDto userDto) {
+    public List<UserDto> findAll() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public UserDto findOne(Long userId) {
+        <User> user = userRepository.findOne(userId);
+//        return userRepository.findOne(userId);
+    }
+
+    @Override
+    public UserDto add(UserDto user) {
         return null;
     }
 
     @Override
-    public UserDto login(UserDto userDto) {
+    public UserDto update(UserDto user) {
         return null;
     }
 
     @Override
-    public UserDto findUserByCategory(String Category) {
-        return null;
-    }
-
-    @Override
-    public UserDto findUserById(Long userId) {
-        return null;
-    }
-
-    @Override
-    public List<UserDto> findAllUsers() {
-        return null;
-    }
-
-    @Override
-    public List<UserDto> findAllParticipant() {
-        return null;
-    }
-
-    @Override
-    public UserDto createUser(UserDto userDto) {
-        return null;
-    }
-
-    @Override
-    public UserDto updateUser(UserDto userDto) {
-        return null;
-    }
-
-    @Override
-    public UserDto deleteUser(UserDto userDto) {
+    public Boolean delete(UserDto user) {
         return null;
     }
 }
