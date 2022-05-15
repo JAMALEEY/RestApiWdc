@@ -1,6 +1,6 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.UserDto;
+import ma.youcode.restapiwdc.dto.model.UserDto;
 
 import java.util.List;
 
