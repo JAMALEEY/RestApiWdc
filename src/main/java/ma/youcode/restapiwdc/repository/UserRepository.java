@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 // Spring Data JPA repositories are interfaces with methods supporting :
 // creating, reading, updating, and deleting records against a back end data store
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, String> {
         // Spring makes accessing data easy. By simply extending JpaRepository
     // specifying the domain type as User and the id type as Long.
         User findByEmail(String email);
