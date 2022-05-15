@@ -1,6 +1,6 @@
 package ma.youcode.restapiwdc.dto.mapper;
 
-import ma.youcode.restapiwdc.dto.model.ExerciseDto;
+import ma.youcode.restapiwdc.dto.model.exercice.ExerciseDto;
 import ma.youcode.restapiwdc.entity.Exercise;
 import org.springframework.stereotype.Component;
 

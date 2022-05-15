@@ -1,4 +1,4 @@
-package ma.youcode.restapiwdc.dto.model;
+package ma.youcode.restapiwdc.dto.model.exercice;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,14 +10,15 @@ import lombok.experimental.Accessors;
 
 @Getter
 @Setter
-@ToString
 @Accessors(chain = true)
 @NoArgsConstructor
+@ToString
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
+public class ExerciseStatusDto {
+    public enum ExerciseStatus {
+        IN_PROGRESS,
+        COMPLETED,
+    }
 
-
-public class RoleDto {
-    private Long idRole;
-    private String roleName;
 }

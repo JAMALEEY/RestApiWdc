@@ -1,4 +1,4 @@
-package ma.youcode.restapiwdc.dto.model;
+package ma.youcode.restapiwdc.dto.model.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

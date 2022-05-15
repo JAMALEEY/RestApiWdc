@@ -1,6 +1,6 @@
 package ma.youcode.restapiwdc.dto.mapper;
 
-import ma.youcode.restapiwdc.dto.model.UserDto;
+import ma.youcode.restapiwdc.dto.model.user.UserDto;
 import ma.youcode.restapiwdc.entity.User;
 import org.springframework.stereotype.Component;
 
