@@ -43,4 +43,8 @@ public class Activity implements Serializable {
     @Enumerated(EnumType.STRING)
     private ActivityStatus activityStatus;
 
+    @ManyToOne
+    @JoinColumn(name = "idTypeActivity")
+    private ActivityType type;
+
 }

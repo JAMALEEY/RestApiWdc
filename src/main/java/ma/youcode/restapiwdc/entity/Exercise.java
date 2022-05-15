@@ -39,6 +39,11 @@ public class Exercise implements Serializable {
     @Enumerated(EnumType.STRING)
     private ExerciseStatus state;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idActivity")
+    private Activity idActivity;
+
+
 
 
 }
