@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
-import ma.youcode.restapiwdc.entity.ActivityStatus;
+import ma.youcode.restapiwdc.entity.Activity;
+
 
 import java.util.Date;
 
@@ -26,7 +27,7 @@ public class ActivityDto {
     private String activityType;
     private Date activityStart;
     private Date activityEnd;
-    private ActivityStatus activityStatus;
+    private Enum activityStatus;
 
 
 }

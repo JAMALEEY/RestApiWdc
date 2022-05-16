@@ -13,6 +13,6 @@ public class ExerciseMapper {
                 .setExerciseYear(exercise.getExerciseYear())
                 .setExerciseStart(exercise.getExerciseStart())
                 .setExerciseEnd(exercise.getExerciseEnd())
-                .setState(exercise.getState());
+                .setExerciseStatus(exercise.getExerciseStatus());
     }
 }

@@ -40,11 +40,19 @@ public class Activity implements Serializable {
     @Column(name = "activity ending date")
     private Date activityEnd;
 
-    @Enumerated(EnumType.STRING)
+     enum ActivityStatus {
+        ENABLED,
+        DISABLED
+    }
+
+    @Column(name = "activityStatus")
     private ActivityStatus activityStatus;
 
     @ManyToOne
     @JoinColumn(name = "idTypeActivity")
     private ActivityType type;
+
+
+
 
 }

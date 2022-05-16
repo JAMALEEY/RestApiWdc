@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
-import ma.youcode.restapiwdc.entity.ExerciseStatus;
 
 import java.util.Date;
 
@@ -25,7 +24,7 @@ public class ExerciseDto {
     private Long exerciseYear;
     private Date exerciseStart;
     private Date exerciseEnd;
-    private ExerciseStatus state;
+    private Enum exerciseStatus;
 
 
 

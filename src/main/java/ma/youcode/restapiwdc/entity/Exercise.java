@@ -36,8 +36,8 @@ public class Exercise implements Serializable {
     @Column(name = "exercise ending date")
     private Date exerciseEnd;
 
-    @Enumerated(EnumType.STRING)
-    private ExerciseStatus state;
+    @Column(name = "exerciseStatus")
+    private Enum exerciseStatus;
 
     @ManyToOne
     @JoinColumn(name = "activity_id")
