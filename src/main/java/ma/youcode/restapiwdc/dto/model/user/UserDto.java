@@ -31,7 +31,7 @@ public class UserDto {
     private String phoneNumber;
     private String email;
     private Boolean status;
-    private List<Role> roles;
+    private Role roles;
 
 
 }
