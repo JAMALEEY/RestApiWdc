@@ -9,5 +9,5 @@ public interface RoleService {
     RoleDto update(RoleDto roleDto);
     Boolean delete(RoleDto roleDto);
     List<RoleDto> findAll();
-    RoleDto findById(Long roleDto);
+    RoleDto findById(Long roleId);
 }

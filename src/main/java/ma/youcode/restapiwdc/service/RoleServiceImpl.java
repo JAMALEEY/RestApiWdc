@@ -29,7 +29,8 @@ public class RoleServiceImpl implements RoleService {
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
             return false;
-        }    }
+        }
+    }
 
     @Override
     public List<RoleDto> findAll() {
