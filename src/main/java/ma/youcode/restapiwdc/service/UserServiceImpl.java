@@ -1,6 +1,5 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.UserDto;
 import ma.youcode.restapiwdc.entity.User;
 import ma.youcode.restapiwdc.repository.ParticipantRepository;
 import ma.youcode.restapiwdc.repository.ResponsibleRepository;
@@ -10,11 +9,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 @Component
 public class UserServiceImpl implements UserService {
@@ -34,51 +30,51 @@ public class UserServiceImpl implements UserService {
     private ModelMapper modelMapper;
 
 //    @Override
-//    public TreeSet<UserDto> findAll() {
+//    public TreeSet<User> findAll() {
 //        return userRepository.findAll()
 //                .stream()
-//                .map(user -> modelMapper.map(user, UserDto.class))
+//                .map(user -> modelMapper.map(user, User.class))
 //                .collect(Collectors.toCollection(TreeSet::new));
 //    }
 
     @Override
-    public List<UserDto> findAll() {
+    public List<User> findAll() {
         return userRepository.findAll();
 
     }
 
     @Override
-    public UserDto login(UserDto userDto) {
-        return userRepository.findByEmail(userDto.getEmail());
+    public User login(User user) {
+        return userRepository.findByEmail(user.getEmail());
     }
 
     @Override
-    public UserDto add(UserDto userDto) {
-        return userRepository.save(userDto);
+    public User add(User user) {
+        return userRepository.save(user);
     }
 
 //    @Override
-//    public UserDto add(UserDto userDto) {
-//        User admin = getUser(userDto.getEmail());
+//    public User add(User user) {
+//        User admin = getUser(user.getEmail());
 //        if (admin != null) {
 //            Optional<User> user = Optional.ofNullable(
-//                    userRepository.findByEmail(userDto.getEmail()));
+//                    userRepository.findByEmail(user.getEmail()));
 //            if (!user.isPresent()) {
 //                return new User()
-//                        .setFirstName(userDto.getFirstName())
-//                        .setLastName(userDto.getLastName()
+//                        .setFirstName(user.getFirstName())
+//                        .setLastName(user.getLastName()
 //                        ;
 //                userRepository.save(userModel);
-//                return modelMapper.map(userModel, UserDto.class);
+//                return modelMapper.map(userModel, User.class);
 //            }
 //return null;
 //        }
-//        return userDto;
+//        return user;
 //    }
 
 
     @Override
-    public UserDto findUserById(Long userId) {
+    public User findUserById(Long userId) {
 //        return userRepository.findById(String.valueOf(userId)).get();
         return userRepository.findById(userId).get();
 
@@ -86,20 +82,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto update(UserDto userDto) {
-        return userRepository.save(userDto);
+    public User update(User user) {
+        return userRepository.save(user);
     }
 
     @Override
-    public UserDto changePassword(UserDto userDto, String newPassword) {
-        return userRepository.findByEmail(userDto.getEmail());
+    public User changePassword(User user, String newPassword) {
+        return userRepository.findByEmail(user.getEmail());
 
     }
 
     @Override
-    public Boolean delete(UserDto userDto) {
+    public Boolean delete(User user) {
         try {
-            userRepository.delete(userDto);
+            userRepository.delete(user);
             return true;
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
@@ -107,7 +103,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    private UserDto getUser(String email) {
+    private User getUser(String email) {
         return userRepository.findByEmail(email);
     }
 

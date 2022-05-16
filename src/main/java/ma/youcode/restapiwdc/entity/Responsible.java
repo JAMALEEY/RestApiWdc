@@ -14,9 +14,6 @@ import java.io.Serializable;
 @PrimaryKeyJoinColumn(name = "idResponsible")
 @Table(name = "responsibles")
 public class Responsible extends User implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idResponsible;
 
     @Column(name = "resposibleDomain")
     private String resposibleDomain;

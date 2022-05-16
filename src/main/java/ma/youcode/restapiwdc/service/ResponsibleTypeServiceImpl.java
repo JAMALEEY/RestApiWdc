@@ -1,6 +1,7 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.ResponsibleTypeDto;
+
+import ma.youcode.restapiwdc.entity.ResponsibleType;
 import ma.youcode.restapiwdc.repository.ResponsibleTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -13,19 +14,19 @@ public class ResponsibleTypeServiceImpl implements ResponsibleTypeService {
     @Autowired
     ResponsibleTypeRepository responsibleTypeRepository;
     @Override
-    public ResponsibleTypeDto add(ResponsibleTypeDto responsibleTypeDto) {
-        return responsibleTypeRepository.save(responsibleTypeDto);
+    public ResponsibleType add(ResponsibleType responsibleType) {
+        return responsibleTypeRepository.save(responsibleType);
     }
 
     @Override
-    public ResponsibleTypeDto update(ResponsibleTypeDto responsibleTypeDto) {
-        return responsibleTypeRepository.save(responsibleTypeDto);
+    public ResponsibleType update(ResponsibleType responsibleType) {
+        return responsibleTypeRepository.save(responsibleType);
     }
 
     @Override
-    public Boolean delete(ResponsibleTypeDto responsibleTypeDto) {
+    public Boolean delete(ResponsibleType responsibleType) {
         try {
-            responsibleTypeRepository.delete(responsibleTypeDto);
+            responsibleTypeRepository.delete(responsibleType);
             return true;
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
@@ -33,12 +34,12 @@ public class ResponsibleTypeServiceImpl implements ResponsibleTypeService {
         }    }
 
     @Override
-    public List<ResponsibleTypeDto> findAll() {
+    public List<ResponsibleType> findAll() {
         return responsibleTypeRepository.findAll();
     }
 
     @Override
-    public ResponsibleTypeDto findById(Long responsibleTypeId) {
+    public ResponsibleType findById(Long responsibleTypeId) {
         return responsibleTypeRepository.findById(responsibleTypeId).get();
     }
 }

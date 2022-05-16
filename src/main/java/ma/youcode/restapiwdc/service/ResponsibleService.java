@@ -1,13 +1,12 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.ResponsibleDto;
-
+import ma.youcode.restapiwdc.entity.Responsible;
 import java.util.List;
 
 public interface ResponsibleService {
-    ResponsibleDto add(ResponsibleDto responsibleDto);
-    ResponsibleDto update(ResponsibleDto responsibleDto);
-    Boolean delete(ResponsibleDto responsibleDto);
-    List<ResponsibleDto> findAll();
-    ResponsibleDto findById(Long responsibleId);
+    Responsible add(Responsible responsible);
+    Responsible update(Responsible responsible);
+    Boolean delete(Responsible responsible);
+    List<Responsible> findAll();
+    Responsible findById(Long responsibleId);
 }

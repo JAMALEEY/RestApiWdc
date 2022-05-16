@@ -1,6 +1,6 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.UserDto;
+import ma.youcode.restapiwdc.entity.User;
 
 import java.util.List;
 
@@ -8,13 +8,13 @@ import java.util.List;
 public interface UserService {
 
 
-    UserDto login(UserDto userDto);
-    UserDto add(UserDto userDto);
-    UserDto update(UserDto userDto);
-    Boolean delete(UserDto userDto);
-    List<UserDto> findAll();
-    UserDto findUserById(Long userId);
-    UserDto changePassword(UserDto userDto, String newPassword);
+    User login(User user);
+    User add(User user);
+    User update(User user);
+    Boolean delete(User user);
+    List<User> findAll();
+    User findUserById(Long userId);
+    User changePassword(User user, String newPassword);
 
 
 
@@ -23,16 +23,16 @@ public interface UserService {
 
 
 //
-//    UserDto adminAuth(UserDto userDto);
-//    UserDto login(UserDto userDto);
-//    UserDto findUserByCategory(String Category);
-//    UserDto findUserById(Long userId);
-//    List<UserDto> findAllUsers();
-//    List<UserDto> findAllParticipant();
+//    User adminAuth(User user);
+//    User login(User user);
+//    User findUserByCategory(String Category);
+//    User findUserById(Long userId);
+//    List<User> findAllUsers();
+//    List<User> findAllParticipant();
 //
-//    UserDto createUser(UserDto userDto);
-//    UserDto updateUser(UserDto userDto);
-//    UserDto deleteUser(UserDto userDto);
+//    User createUser(User user);
+//    User updateUser(User user);
+//    User deleteUser(User user);
 
 
 

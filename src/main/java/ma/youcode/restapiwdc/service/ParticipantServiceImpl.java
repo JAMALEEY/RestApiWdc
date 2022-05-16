@@ -1,6 +1,6 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.ParticipantDto;
+import ma.youcode.restapiwdc.entity.Participant;
 import ma.youcode.restapiwdc.repository.ParticipantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -13,17 +13,17 @@ public class ParticipantServiceImpl implements ParticipantService{
     @Autowired
     ParticipantRepository participantRepository;
     @Override
-    public ParticipantDto add(ParticipantDto participantDto) {
+    public Participant add(Participant participantDto) {
         return participantRepository.save(participantDto);
     }
 
     @Override
-    public ParticipantDto update(ParticipantDto participantDto) {
+    public Participant update(Participant participantDto) {
         return participantRepository.save(participantDto);
     }
 
     @Override
-    public Boolean delete(ParticipantDto participantDto) {
+    public Boolean delete(Participant participantDto) {
         try {
             participantRepository.delete(participantDto);
             return true;
@@ -34,12 +34,12 @@ public class ParticipantServiceImpl implements ParticipantService{
     }
 
     @Override
-    public List<ParticipantDto> findAll() {
+    public List<Participant> findAll() {
         return participantRepository.findAll();
     }
 
     @Override
-    public ParticipantDto findById(Long participantId) {
+    public Participant findById(Long participantId) {
         return participantRepository.findById(participantId).get();
     }
 }

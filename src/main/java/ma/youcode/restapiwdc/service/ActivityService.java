@@ -1,14 +1,13 @@
 package ma.youcode.restapiwdc.service;
 
 
-import ma.youcode.restapiwdc.dto.model.exercice.ActivityDto;
-
+import ma.youcode.restapiwdc.entity.Activity;
 import java.util.List;
 
 public interface ActivityService {
-    ActivityDto add(ActivityDto activityDto);
-    ActivityDto update(ActivityDto activityDto);
-    Boolean delete(ActivityDto activityDto);
-    List<ActivityDto> findAll();
-    ActivityDto findById(Long activityId);
+    Activity add(Activity activity);
+    Activity update(Activity activity);
+    Boolean delete(Activity activity);
+    List<Activity> findAll();
+    Activity findById(Long activityId);
 }

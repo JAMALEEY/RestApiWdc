@@ -1,6 +1,7 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.exercice.ExerciseDto;
+
+import ma.youcode.restapiwdc.entity.Exercise;
 import ma.youcode.restapiwdc.repository.ExerciseRepository;
 import ma.youcode.restapiwdc.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,19 +17,19 @@ public class ExerciseServiceImpl implements ExerciseService{
 
 
     @Override
-    public ExerciseDto add(ExerciseDto exerciseDto) {
-        return exerciseRepository.save(exerciseDto);
+    public Exercise add(Exercise exercise) {
+        return exerciseRepository.save(exercise);
     }
 
     @Override
-    public ExerciseDto update(ExerciseDto exerciseDto) {
-        return exerciseRepository.save(exerciseDto);
+    public Exercise update(Exercise exercise) {
+        return exerciseRepository.save(exercise);
     }
 
     @Override
-    public Boolean delete(ExerciseDto exerciseDto) {
+    public Boolean delete(Exercise exercise) {
         try {
-            exerciseRepository.delete(exerciseDto);
+            exerciseRepository.delete(exercise);
             return true;
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
@@ -37,12 +38,12 @@ public class ExerciseServiceImpl implements ExerciseService{
     }
 
     @Override
-    public List<ExerciseDto> findAll() {
+    public List<Exercise> findAll() {
         return exerciseRepository.findAll();
     }
 
     @Override
-    public ExerciseDto findById(Long exerciseId) {
+    public Exercise findById(Long exerciseId) {
         return exerciseRepository.findById(exerciseId).get();
     }
 }

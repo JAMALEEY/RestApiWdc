@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ParticipantMapper {
     public static ParticipantDto participantDto (Participant participant) {
         return new ParticipantDto()
-                .setIdParticipant(participant.getIdParticipant())
+                .setIdParticipant(participant.getIdUser())
                 .setParticipantDomain(participant.getParticipantDomain())
                 .setActivity(participant.getActivity())
                 .setStructure(participant.getStructure());

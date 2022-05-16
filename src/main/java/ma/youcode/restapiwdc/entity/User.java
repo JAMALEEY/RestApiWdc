@@ -56,9 +56,8 @@ public class User implements Serializable {
     @Column(name = "status", nullable = false)
     private Boolean status;
 
-    @NotNull(message = "role")
-    @Column(name = "role", nullable = false)
-    @ManyToOne
+    @NotNull(message = "roleId")
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Role roles;
 
 }

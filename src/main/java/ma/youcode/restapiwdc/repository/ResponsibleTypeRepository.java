@@ -1,7 +1,8 @@
 package ma.youcode.restapiwdc.repository;
 
-import ma.youcode.restapiwdc.dto.model.user.ResponsibleTypeDto;
+
+import ma.youcode.restapiwdc.entity.ResponsibleType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ResponsibleTypeRepository extends JpaRepository<ResponsibleTypeDto, Long> {
+public interface ResponsibleTypeRepository extends JpaRepository<ResponsibleType, Long> {
 }

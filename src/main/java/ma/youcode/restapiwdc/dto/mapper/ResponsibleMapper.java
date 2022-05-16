@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ResponsibleMapper {
     public static ResponsibleDto responsibleDto (Responsible responsible) {
         return new ResponsibleDto()
-                .setIdResponsible(responsible.getIdResponsible())
+                .setIdResponsible(responsible.getIdUser())
                 .setResposibleDomain(responsible.getResposibleDomain());
     }
 }

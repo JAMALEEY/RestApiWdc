@@ -1,6 +1,7 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.RoleDto;
+
+import ma.youcode.restapiwdc.entity.Role;
 import ma.youcode.restapiwdc.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -14,19 +15,19 @@ public class RoleServiceImpl implements RoleService {
     private RoleRepository roleRepository;
 
     @Override
-    public RoleDto add(RoleDto roleDto) {
-        return roleRepository.save(roleDto);
+    public Role add(Role role) {
+        return roleRepository.save(role);
     }
 
     @Override
-    public RoleDto update(RoleDto roleDto) {
-        return roleRepository.save(roleDto);
+    public Role update(Role role) {
+        return roleRepository.save(role);
     }
 
     @Override
-    public Boolean delete(RoleDto roleDto) {
+    public Boolean delete(Role role) {
         try {
-            roleRepository.delete(roleDto);
+            roleRepository.delete(role);
             return true;
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
@@ -35,12 +36,12 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public List<RoleDto> findAll() {
+    public List<Role> findAll() {
         return roleRepository.findAll();
     }
 
     @Override
-    public RoleDto findById(Long roleId) {
+    public Role findById(Long roleId) {
         return roleRepository.findById(roleId).get();
     }
 }

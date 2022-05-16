@@ -1,6 +1,7 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.user.ResponsibleDto;
+
+import ma.youcode.restapiwdc.entity.Responsible;
 import ma.youcode.restapiwdc.repository.ResponsibleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -13,19 +14,19 @@ public class ResponsibleServiceImpl implements ResponsibleService{
     @Autowired
     ResponsibleRepository responsibleRepository;
     @Override
-    public ResponsibleDto add(ResponsibleDto responsibleDto) {
-        return responsibleRepository.save(responsibleDto);
+    public Responsible add(Responsible responsible) {
+        return responsibleRepository.save(responsible);
     }
 
     @Override
-    public ResponsibleDto update(ResponsibleDto responsibleDto) {
-        return responsibleRepository.save(responsibleDto);
+    public Responsible update(Responsible responsible) {
+        return responsibleRepository.save(responsible);
     }
 
     @Override
-    public Boolean delete(ResponsibleDto responsibleDto) {
+    public Boolean delete(Responsible responsible) {
         try {
-            responsibleRepository.delete(responsibleDto);
+            responsibleRepository.delete(responsible);
             return true;
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
@@ -34,12 +35,12 @@ public class ResponsibleServiceImpl implements ResponsibleService{
     }
 
     @Override
-    public List<ResponsibleDto> findAll() {
+    public List<Responsible> findAll() {
         return responsibleRepository.findAll();
     }
 
     @Override
-    public ResponsibleDto findById(Long responsibleId) {
+    public Responsible findById(Long responsibleId) {
         return responsibleRepository.findById(responsibleId).get();
     }
 }

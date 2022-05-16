@@ -1,6 +1,6 @@
 package ma.youcode.restapiwdc.service;
 
-import ma.youcode.restapiwdc.dto.model.exercice.ActivityDto;
+import ma.youcode.restapiwdc.entity.Activity;
 import ma.youcode.restapiwdc.repository.ActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -15,19 +15,19 @@ public class ActivityServiceImpl implements  ActivityService{
     ActivityRepository activityRepository;
 
     @Override
-    public ActivityDto add(ActivityDto activityDto) {
-        return activityRepository.save(activityDto);
+    public Activity add(Activity activity) {
+        return activityRepository.save(activity);
     }
 
     @Override
-    public ActivityDto update(ActivityDto activityDto) {
-        return activityRepository.save(activityDto);
+    public Activity update(Activity activity) {
+        return activityRepository.save(activity);
     }
 
     @Override
-    public Boolean delete(ActivityDto activityDto) {
+    public Boolean delete(Activity activity) {
         try {
-            activityRepository.delete(activityDto);
+            activityRepository.delete(activity);
             return true;
         }catch (DataAccessException e){
             System.out.println(e.getMessage());
@@ -36,12 +36,12 @@ public class ActivityServiceImpl implements  ActivityService{
     }
 
     @Override
-    public List<ActivityDto> findAll() {
+    public List<Activity> findAll() {
         return activityRepository.findAll();
     }
 
     @Override
-    public ActivityDto findById(Long activityId) {
+    public Activity findById(Long activityId) {
         return activityRepository.findById(activityId).get();
     }
 }
