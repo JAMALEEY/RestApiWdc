@@ -1,16 +1,21 @@
 package ma.youcode.restapiwdc.service;
 
 import ma.youcode.restapiwdc.dto.model.user.UserDto;
-import ma.youcode.restapiwdc.entity.User;
 
 import java.util.List;
 
+
 public interface UserService {
+
+
+    UserDto login(UserDto userDto);
+    UserDto add(UserDto userDto);
+    UserDto update(UserDto userDto);
+    Boolean delete(UserDto userDto);
     List<UserDto> findAll();
-    UserDto findOne(Long userId);
-    UserDto add(UserDto user);
-    UserDto update(UserDto user);
-    Boolean delete(UserDto user);
+    UserDto findUserById(Long userId);
+    UserDto changePassword(UserDto userDto, String newPassword);
+
 
 
 
