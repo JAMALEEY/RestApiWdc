@@ -4,8 +4,10 @@ import ma.youcode.restapiwdc.dto.model.user.RoleDto;
 import ma.youcode.restapiwdc.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
+@Component
 
 public class RoleServiceImpl implements RoleService {
     @Autowired
