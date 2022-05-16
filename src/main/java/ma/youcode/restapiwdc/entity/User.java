@@ -58,7 +58,7 @@ public class User implements Serializable {
 
     @NotNull(message = "role")
     @Column(name = "role", nullable = false)
-    @OneToMany
-    private List<Role> roles;
+    @ManyToOne
+    private Role roles;
 
 }

@@ -22,12 +22,12 @@ public class UserMapper {
                 .setPhoneNumber(user.getPhoneNumber())
                 .setEmail(user.getEmail())
                 .setStatus(user.getStatus())
-                .setRoles(user.getRoles()
+                .setRoles(user.getRoles())
+                ;
+    }
+}
 //                .setRoles((user
 //                                .getRoles()
 //                                .stream()
 //                                .map(role -> new ModelMapper().map(role, RoleDto.class))
 //                                .collect(Collectors.toSet()))
-                );
-    }
-}
