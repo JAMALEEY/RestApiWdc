@@ -11,8 +11,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder restApiWdcApplication) {
-        return restApiWdcApplication
-                .sources(RestApiWdcApplication.class);
+        return restApiWdcApplication.sources(RestApiWdcApplication.class);
     }
 
 }
