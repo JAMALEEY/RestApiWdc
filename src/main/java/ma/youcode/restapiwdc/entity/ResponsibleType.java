@@ -11,12 +11,14 @@ import java.io.Serializable;
 @ToString
 @Entity
 @Table(name = "responsibletypes")
-public class ResponsibleType implements Serializable {
+@PrimaryKeyJoinColumn(name = "user_id")
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTypeResponsible")
-    private Long id;
+public class ResponsibleType extends User implements Serializable {
+
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "responsible_type_id")
+    private ResponsibleType type;
+
 
     @Column(name = "responsibleType")
     private String responsibleType;

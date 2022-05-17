@@ -7,7 +7,7 @@ public class ActivityTypeMapper {
     public static ActivityTypeDto activityTypeDto (ActivityType activityType) {
         return new ActivityTypeDto()
                 .setActivityType(activityType.getActivityType())
-                .setId(activityType.getId());
+                .setId(activityType.getIdActivity());
 
     }
 }

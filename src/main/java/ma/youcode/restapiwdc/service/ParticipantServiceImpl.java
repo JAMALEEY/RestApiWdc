@@ -42,4 +42,15 @@ public class ParticipantServiceImpl implements ParticipantService{
     public Participant findById(Long participantId) {
         return participantRepository.findById(participantId).get();
     }
+
+    @Override
+    public Participant login(Participant participant) {
+        return participantRepository.findByEmail(participant.getEmail());
+
+    }
+
+    @Override
+    public Participant forgetPassword(Participant participant) {
+        return participantRepository.findByEmail(participant.getEmail());
+    }
 }

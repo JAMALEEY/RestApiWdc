@@ -43,4 +43,14 @@ public class ResponsibleServiceImpl implements ResponsibleService{
     public Responsible findById(Long responsibleId) {
         return responsibleRepository.findById(responsibleId).get();
     }
+
+    @Override
+    public Responsible login(Responsible responsible) {
+        return responsibleRepository.findByEmail(responsible.getEmail());
+    }
+
+    @Override
+    public Responsible forgetPassword(Responsible responsible) {
+        return  responsibleRepository.findByEmail(responsible.getEmail());
+    }
 }

@@ -5,4 +5,6 @@ import ma.youcode.restapiwdc.entity.Responsible;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ResponsibleRepository extends JpaRepository<Responsible, Long> {
+    public Responsible findByEmail(String email);
+
 }

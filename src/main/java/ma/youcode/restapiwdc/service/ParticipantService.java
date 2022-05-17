@@ -11,4 +11,7 @@ public interface ParticipantService {
     Boolean delete(Participant participant);
     List<Participant> findAll();
     Participant findById(Long participantId);
+
+    Participant login(Participant participant);
+    Participant forgetPassword(Participant participant);
 }

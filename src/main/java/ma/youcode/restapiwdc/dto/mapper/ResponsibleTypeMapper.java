@@ -9,6 +9,6 @@ public class ResponsibleTypeMapper {
     public static ResponsibleTypeDto responsibleTypeDto (ResponsibleType responsibleType) {
         return new ResponsibleTypeDto()
                 .setResponsibleType(responsibleType.getResponsibleType())
-                .setId(responsibleType.getId());
+                .setId(responsibleType.getIdUser());
     }
 }

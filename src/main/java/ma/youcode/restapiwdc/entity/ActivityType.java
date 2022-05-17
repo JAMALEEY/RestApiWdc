@@ -10,13 +10,10 @@ import java.io.Serializable;
 @Setter
 @ToString
 @Entity
+@PrimaryKeyJoinColumn(name = "activitytypeId")
 @Table(name = "activitytypes")
-public class ActivityType implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTypeActivity")
-    private Long id;
+public class ActivityType extends Activity implements Serializable {
 
     @Column(name = "activityType")
     private String activityType;
